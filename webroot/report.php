@@ -37,8 +37,7 @@ Inga problem. Anvisningarna är du väldigt tydliga och så finns det även exem
 <b>Gjorde du extrauppgiften med GitHub? </b><br />
 Ja.
 <br /><br />
-Github: <br />
-Redovisning:
+Github: <a href="https://github.com/sibala/ooweb">https://github.com/sibala/ooweb</a><br />
 
 
 </p>
