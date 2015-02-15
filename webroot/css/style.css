@@ -1,0 +1,75 @@
+/**
+ * General elements
+ */
+body {
+  color: #333;
+  font-family: arial, sans-serif;
+}
+ 
+/**
+ * Layout of the main page elements 
+ */
+#wrapper {
+  margin: 0 auto;
+  width: 980px; 
+  padding: 10px;
+}
+ 
+ 
+/**
+ * Layout for header
+ */
+#header {
+  position: relative;
+  margin-bottom: 40px;
+}
+.sitelogo {
+  height: 120px;
+  width: 150px;
+  margin-left: -10px;
+}
+
+.sitetitle {
+  position: absolute;
+  top: 6px;
+  left: 150px;
+  font-size: 48px;
+}
+ 
+.siteslogan {
+  position: absolute;
+  top: 65px;
+  left: 150px;
+  font-style: italic;
+  color: #666;
+}
+
+
+/*
+*menu
+*/
+.navbar {display block;font-family:Verdana;padding:0.5em;list-style-type: none; height:30px;}
+.navbar a {background-color:#999;color:#fff;padding:0.2em; float:left; margin-right:20px;text-decoration:none;}
+.navbar a:hover {background-color:#666;padding:0.5em 0.2em 0.5em 0.2em}
+.navbar a.selected  {background-color:#145090;color:#fff;padding:0.2em; float:left; margin-right:20px;text-decoration:none;}
+ 
+/**
+ * Layout for main
+ */
+#main {
+  min-height: 20em;
+}
+ 
+ 
+/**
+ * Layout for footer
+ */
+#footer {
+  margin-top: 40px;
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+}
+ 
+.sitefooter {
+  color: #666;
+}
