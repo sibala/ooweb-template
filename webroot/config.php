@@ -27,14 +27,7 @@ define('OOWEB_THEME_PATH', OOWEB_INSTALL_PATH . '/theme/render.php');
  */
 include(OOWEB_INSTALL_PATH . '/src/bootstrap.php');
  
- 
-/**
- * Start the session.
- *
- */
-session_name(preg_replace('/[^a-z\d]/i', '', __DIR__));
-session_start();
- 
+
  
 /**
  * Create the OOWeb variable.
@@ -50,13 +43,12 @@ $ooweb = array();
 $ooweb['lang']         = 'sv';
 $ooweb['title_append'] = ' | OOWeb en webbtemplate';
 
-
 /**
  * Theme related settings.
  *
  */
 //$ooweb['stylesheet'] = 'css/style.css';
-$ooweb['stylesheets'] = array('css/style.css');
+$ooweb['stylesheets'] = array('css/style.css', 'css/dice.css', 'css/gallery.css', 'css/figure.css', 'css/breadcrumb.css');
 $ooweb['favicon']    = 'img/favicon.ico';
 
 
@@ -82,12 +74,13 @@ $ooweb['google_analytics'] = 'UA-22093351-1'; // Set to null to disable google a
   * The menu/navbar
   *
   */
-$ooweb['menu'] = array( // Menu choices with text and link
-  'class' => 'navbar', // Set css class
+$ooweb['menu'] = array(
+  'class' => 'navbar',
   'items' => array(
-    'hem'  => array('text'=>'Hem',  'url'=>'me.php', 'title'=>'Presentation av mig själv'),
-    'redovisning'  => array('text'=>'Redovisning',  'url'=>'report.php', 'title'=>'kmom1'),
-    'kallkod' => array('text'=>'Källkod', 'url'=>'source.php', 'title'=>'Se källkod'),
+    'example'    => array('text'=>'Exampel sida',   'url'=>'example.php',        'title' => 'Exempel sida'),
+    'dice'    => array('text'=>'Tärningsspel',   'url'=>'dice.php',        'title' => 'Tärningsspel'),
+    'gallery'    => array('text'=>'Galleri',   'url'=>'gallery.php',        'title' => 'Galleri'),
+    'source'    => array('text'=>'Källkod',   'url'=>'source.php',        'title' => 'Källkod')
   ),
   'callback_selected' => function($url) {
     if(basename($_SERVER['SCRIPT_FILENAME']) == $url) {
@@ -95,3 +88,16 @@ $ooweb['menu'] = array( // Menu choices with text and link
     }
   }
 );
+
+
+$ooweb['header'] = <<<EOD
+<img class='sitelogo' src='img/mouse.jpg' alt='OOWeb Logo'/>
+<span class='sitetitle'>OOWeb en webbtemplate</span>
+<span class='siteslogan'>en under titel</span><br>
+EOD;
+
+
+
+$ooweb['footer'] = <<<EOD
+<footer><span class='sitefooter'>Copyright (c) OOWeb</span></footer>
+EOD;

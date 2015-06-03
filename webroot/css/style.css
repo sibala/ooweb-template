@@ -48,9 +48,9 @@ body {
 /*
 *menu
 */
-.navbar {display block;font-family:Verdana;padding:0.5em;list-style-type: none; height:30px;}
-.navbar a {background-color:#999;color:#fff;padding:0.2em; float:left; margin-right:20px;text-decoration:none;}
-.navbar a:hover {background-color:#666;padding:0.5em 0.2em 0.5em 0.2em}
+.navbar {display block;font-family:Verdana;padding:0.5em;list-style-type: none; height:30px;margin-bottom:50px;}
+.navbar a {background-color:#999;color:#fff;padding:0.2em; float:left; margin-right:20px;text-decoration:none;margin-bottom:10px;}
+.navbar a:hover {background-color:#666;}
 .navbar a.selected  {background-color:#145090;color:#fff;padding:0.2em; float:left; margin-right:20px;text-decoration:none;}
  
 /**
@@ -72,4 +72,57 @@ body {
  
 .sitefooter {
   color: #666;
+}
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+footer.home-footer section img {
+  margin-right:27px;
+}
+
+.dbtable table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dbtable td, th {
+  border: 3px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.dbtable .rows {
+  font-size: 1.2em;
+  float:right;
+
+}
+
+.dbtable .pages {
+  font-size: 1.2em;
+  text-align: center;
 }

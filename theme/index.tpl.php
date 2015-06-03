@@ -15,6 +15,7 @@
   <div id='wrapper'>
     <div id='header'><?=$header?></div>
     <?php if(isset($menu)): ?><?=get_navbar($menu)?><?php endif; ?>
+    <div id='title'><h1><?=$title?></h1></div>
     <div id='main'><?=$main?></div>
     <div id='footer'><?=$footer?></div>
   </div>
